@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Java Script Basic</title>
+<style type="text/css">
+body {
+	width:960px;
+	min-height:550px;
+	background-color:#F0F0F0;
+	margin:auto;
+}
+h2 {
+	text-align:center;
+	color:white;
+	background-color:lightpink;
+	border-radius:8px;
+}
+a {
+	text-decoration:none;
+	color:#744627;
+	text-align:center;
+}
+form {
+	text-align:center;
+}
+p {
+	font-size:16px;
+	color:#EB7841;
+	text-align:center;
+}
+</style>
+<script type="text/javascript">
+
+function displaydate() {
+	document.getElementById("ex1").innerHTML=Date();	
+}
+
+window.onload = function () {
+document.getElementById("ex2").innerHTML="This site has not a virus";
+}
+
+function sentence(){
+	document.getElementById("ex3").innerHTML="PHP and ASP";	
+}
+
+function upversion(){
+	document.getElementById("ex4").innerHTML="CSS 3";
+	document.getElementById("ex5").innerHTML="HTML 5";	
+}
+
+function carname (){
+	var company="BMW";
+	document.getElementById("ex6").innerHTML=company;	
+}
+
+function cln(){
+	var y=128;
+	var x=y+512;
+	var ex7P=document.getElementById("ex7");
+	ex7P.innerHTML="x="	+ x;
+}
+
+function createnew(){
+	txt1="206 ";
+	txt2=" Sedan";
+	txt3=txt1+txt2;
+	document.getElementById("ex8").innerHTML=txt3;	
+}
+
+function naw(){
+	var x=215*641;
+	var y="666"+999;
+	var z="mer"+30;
+	var ex9=document.getElementById("ex9");
+	ex9.innerHTML=x + "<br />" + y + "<br />" + z;	
+}
+
+function awr(){
+	var weight,voteable;
+	weight=document.getElementById("weight").value;
+	voteable=(weight<55)?"Too Lightweight":"Too Heavy";
+	document.getElementById("ex10").innerHTML=voteable;	
+}	
+
+function showid(name,job) {
+	alert("کارمند " + name + " بخش " + job);	
+}
+
+/*window.onload = function () {
+	var x=prompt("عددی بین پنج و ده وارد کنید:","");
+	try{ 
+	if(x>10){
+		throw "Err1";
+	}
+	else if(x<5){
+  		throw "Err2";
+	}
+	else if(isNaN(x)){
+  		throw "Err3";
+	}
+}
+	catch(err){
+		if(err=="Err1"){
+			document.write("خطا! ورودی بزرگتر از حد مجاز است.");
+		}
+		if(err=="Err2"){
+			document.write("خطا! ورودی کوچکتر از حد مجاز است.");
+		}
+		if(err=="Err3"){
+			document.write("خطا! ورودی مجاز نیست.");
+		}
+	}
+}*/
+
+function ampm(){
+	var x="";
+	var time=new Date().getHours();
+	if (time<12){
+	  x="Morning AM";
+	}
+	else{
+	  x="Evening PM";/*font ya size o color ?*/
+	}
+	document.getElementById("ex12").innerHTML=x;
+}
+
+function showyear() {
+	var y = new Date();
+	var x = document.getElementById('ex13');
+	x.innerHTML=y.getFullYear();	
+}
+
+window.onload = function () {
+	var y = new Date();
+	var x = document.getElementById('ex14');
+	x.innerHTML=y.getTime();	
+}
+</script>
+</head>
+
+<body>
+<h2>Java Script Basic</h2>
+<a id="ex1" href="#">Here Dsiplay Date and Time</a>
+<form>
+  <input type="button" value="Show Date" onclick="displaydate()" style="width:100px;background-color:darkmagenta;color:white;border-radius:8px;font-weight:bolder;" />
+</form>
+<hr />
+<p id="ex2">This site has a virus</p>
+<hr />
+<p id="ex3">Java Script</p>
+<form>
+  <input type="button" value="Push Me" onclick="sentence()" />
+</form>
+<hr />
+<p id="ex4">Css</p>
+<p id="ex5">Html</p>
+<form>
+  <input type="button" value="Click Here" onclick="upversion()" />
+</form>
+<hr />
+<p id="ex6"></p>
+<form>
+  <input type="button" value="Click" onclick="carname()" />
+</form>
+<hr />
+<p>Given that y=128, calculate x=y+512, and display the result.</p>
+<p id="ex7"></p>
+<form>
+  <input type="button" value="Calculation" onclick="cln()" />
+</form>
+<hr />
+<p>Click the button to create and add string variables!</p>
+<p id="ex8"></p>
+<form>
+  <input type="button" value="New Word" onclick="createnew()" />
+</form>
+<hr />
+<p>Click the button to add numbers and strings.</p>
+<p id="ex9"></p>
+<form>
+  <input type="button" value="number and word" onclick="naw()" />
+</form>
+<hr />
+<p>Click the button to check the weight!</p>
+<form>
+  Kilogram :
+  <input id="weight" type="text" value="55" />
+  <input type="button" value="Check" onclick="awr()" />
+</form>
+<p>Heavy Or lightweight ?</p>
+<p id="ex10"></p>
+<hr />
+<p style="direction:rtl;">با توجه به دسته بندی زیر گزینه مورد نظر را انتخاب کنید :</p>
+<form>
+  <input type="button" value="حراست" onclick="showid('بهادر جعفری','حراست')" />
+  <input type="button" value="پذیرش" onclick="showid('یاسر وهاب زاده','پذیرش')" />
+</form>
+<hr />
+<p>Security Code</p>
+<p id="ex11"></p>
+<hr />
+<p id="ex12"></p>
+<form>
+  <input type="button" value="AM or PM" onclick="ampm()" />
+</form>
+<hr />
+<h2>Java Script Objects</h2>
+<hr />
+<p id="ex13">Click the button to display the full year of todays date.</p>
+<form>
+	<input type="button" value="Show Year" onclick="showyear()" />
+</form>
+<hr />
+<p id="ex14">Click the button</p>
+<!--<form>
+	<input type="button" value="Show Mili Seconds" onclick="milisc()" />
+</form>-->
+<!--	js==>comments
+		js==>If...else
+
+-->
+</body>
+</html>

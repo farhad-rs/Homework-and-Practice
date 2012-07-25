@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fun - JS 2</title>
+<style type="text/css">
+	body {
+		background-image:url('bg.jpg');	
+	}
+	div.mtns {
+		width:100px;
+		height:50px;
+		left:45%;
+		top:45%;
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:16px;
+		text-align:center;
+		color:white;
+		position:absolute;
+		line-height:50px;	
+		background-color:#980D05;
+		border-radius:10px;
+		border:solid 1px white;
+		box-shadow:0 0 20px 4px #C87B77;
+		transition:all 2s;
+		-webkit-transition:all 2s;
+		-moz-transition:all 2s;
+		-ms-transition:all 2s;
+		-o-transition:all 2s;
+	}
+
+</style>
+<script type="text/javascript"> /*Math.floor() chie ?*/
+	function rnd(a,b) {
+		return Math.floor(Math.random()*(b+1))+(a/3); 
+	}
+	function randColor () {
+		var c='#';
+		for (var i=0;i<6;i++) {
+			c+=rnd(0,15).toString(16);/*c+ yani chi?*/
+		}
+		return c;
+	}
+	window.onload=function () {
+		var mtns = document.getElementsByClassName('mtns');
+		for (var i=0;i<mtns.length;i++) {
+			mtns.item(i).style.left=rnd(10,85)+'%';
+			mtns.item(i).style.top=rnd(10,85)+'%';
+			mtns.item(i).style.backgroundColor = randColor();
+			mtns.item(i).style.boxShadow = randColor();
+			mtns.item(i).onmouseover=function () {
+				this.style.left=rnd(10,85)+'%';
+				this.style.top=rnd(10,85)+'%';	
+				this.style.backgroundColor = randColor();
+				this.style.boxShadow = randColor();/*chera baraye box shadow kar nemikone?*/
+			}
+		}
+	}
+</script>
+</head>
+<body>
+<script type="text/javascript">
+	for (var i=0;i<50;i++) {
+		document.write('<div class="mtns">Follow Me</div>');	
+	}
+</script>
+</body>
+</html>
