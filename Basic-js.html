@@ -131,10 +131,11 @@ function showyear() {
 	x.innerHTML=y.getFullYear();	
 }
 
-window.onload = function () {
+function milisc() {
 	var y = new Date();
 	var x = document.getElementById('ex14');
 	x.innerHTML=y.getTime();	
+	setInterval(function_milisc,1000);
 }
 </script>
 </head>
@@ -213,9 +214,9 @@ window.onload = function () {
 </form>
 <hr />
 <p id="ex14">Click the button</p>
-<!--<form>
+<form>
 	<input type="button" value="Show Mili Seconds" onclick="milisc()" />
-</form>-->
+</form>
 <!--	js==>comments
 		js==>If...else
 
