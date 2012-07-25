@@ -135,91 +135,110 @@ function milisc() {
 	var y = new Date();
 	var x = document.getElementById('ex14');
 	x.innerHTML=y.getTime();	
-	setInterval(function_milisc,1000);
+}
+
+function startTime() {
+	var today=new Date();
+	var h=today.getHours();
+	var m=today.getMinutes();
+	var s=today.getSeconds();
+	m=checkTime(m);
+	s=checkTime(s);
+	document.getElementById('ex15').innerHTML=h+":"+m+":"+s;
+	t=setTimeout('startTime()',500);	
+}
+
+function checkTime(i) {
+	if (i<10) {
+		i="0" + i;	
+	}
+	return i;
 }
 </script>
 </head>
 
-<body>
-<h2>Java Script Basic</h2>
-<a id="ex1" href="#">Here Dsiplay Date and Time</a>
-<form>
-  <input type="button" value="Show Date" onclick="displaydate()" style="width:100px;background-color:darkmagenta;color:white;border-radius:8px;font-weight:bolder;" />
-</form>
-<hr />
-<p id="ex2">This site has a virus</p>
-<hr />
-<p id="ex3">Java Script</p>
-<form>
-  <input type="button" value="Push Me" onclick="sentence()" />
-</form>
-<hr />
-<p id="ex4">Css</p>
-<p id="ex5">Html</p>
-<form>
-  <input type="button" value="Click Here" onclick="upversion()" />
-</form>
-<hr />
-<p id="ex6"></p>
-<form>
-  <input type="button" value="Click" onclick="carname()" />
-</form>
-<hr />
-<p>Given that y=128, calculate x=y+512, and display the result.</p>
-<p id="ex7"></p>
-<form>
-  <input type="button" value="Calculation" onclick="cln()" />
-</form>
-<hr />
-<p>Click the button to create and add string variables!</p>
-<p id="ex8"></p>
-<form>
-  <input type="button" value="New Word" onclick="createnew()" />
-</form>
-<hr />
-<p>Click the button to add numbers and strings.</p>
-<p id="ex9"></p>
-<form>
-  <input type="button" value="number and word" onclick="naw()" />
-</form>
-<hr />
-<p>Click the button to check the weight!</p>
-<form>
-  Kilogram :
-  <input id="weight" type="text" value="55" />
-  <input type="button" value="Check" onclick="awr()" />
-</form>
-<p>Heavy Or lightweight ?</p>
-<p id="ex10"></p>
-<hr />
-<p style="direction:rtl;">با توجه به دسته بندی زیر گزینه مورد نظر را انتخاب کنید :</p>
-<form>
-  <input type="button" value="حراست" onclick="showid('بهادر جعفری','حراست')" />
-  <input type="button" value="پذیرش" onclick="showid('یاسر وهاب زاده','پذیرش')" />
-</form>
-<hr />
-<p>Security Code</p>
-<p id="ex11"></p>
-<hr />
-<p id="ex12"></p>
-<form>
-  <input type="button" value="AM or PM" onclick="ampm()" />
-</form>
-<hr />
-<h2>Java Script Objects</h2>
-<hr />
-<p id="ex13">Click the button to display the full year of todays date.</p>
-<form>
-	<input type="button" value="Show Year" onclick="showyear()" />
-</form>
-<hr />
-<p id="ex14">Click the button</p>
-<form>
-	<input type="button" value="Show Mili Seconds" onclick="milisc()" />
-</form>
-<!--	js==>comments
-		js==>If...else
-
--->
+<body onload="startTime()">
+    <h2>Java Script Basic</h2>
+    <a id="ex1" href="#">Here Dsiplay Date and Time</a>
+    <form>
+      <input type="button" value="Show Date" onclick="displaydate()" style="width:100px;background-color:darkmagenta;color:white;border-radius:8px;font-weight:bolder;" />
+    </form>
+    <hr />
+    <p id="ex2">This site has a virus</p>
+    <hr />
+    <p id="ex3">Java Script</p>
+    <form>
+      <input type="button" value="Push Me" onclick="sentence()" />
+    </form>
+    <hr />
+    <p id="ex4">Css</p>
+    <p id="ex5">Html</p>
+    <form>
+      <input type="button" value="Click Here" onclick="upversion()" />
+    </form>
+    <hr />
+    <p id="ex6"></p>
+    <form>
+      <input type="button" value="Click" onclick="carname()" />
+    </form>
+    <hr />
+    <p>Given that y=128, calculate x=y+512, and display the result.</p>
+    <p id="ex7"></p>
+    <form>
+      <input type="button" value="Calculation" onclick="cln()" />
+    </form>
+    <hr />
+    <p>Click the button to create and add string variables!</p>
+    <p id="ex8"></p>
+    <form>
+      <input type="button" value="New Word" onclick="createnew()" />
+    </form>
+    <hr />
+    <p>Click the button to add numbers and strings.</p>
+    <p id="ex9"></p>
+    <form>
+      <input type="button" value="number and word" onclick="naw()" />
+    </form>
+    <hr />
+    <p>Click the button to check the weight!</p>
+    <form>
+      Kilogram :
+      <input id="weight" type="text" value="55" />
+      <input type="button" value="Check" onclick="awr()" />
+    </form>
+    <p>Heavy Or lightweight ?</p>
+    <p id="ex10"></p>
+    <hr />
+    <p style="direction:rtl;">با توجه به دسته بندی زیر گزینه مورد نظر را انتخاب کنید :</p>
+    <form>
+      <input type="button" value="حراست" onclick="showid('بهادر جعفری','حراست')" />
+      <input type="button" value="پذیرش" onclick="showid('یاسر وهاب زاده','پذیرش')" />
+    </form>
+    <hr />
+    <p>Security Code</p>
+    <p id="ex11"></p>
+    <hr />
+    <p id="ex12"></p>
+    <form>
+      <input type="button" value="AM or PM" onclick="ampm()" />
+    </form>
+    <hr />
+    <h2>Java Script Objects</h2>
+    <hr />
+    <p id="ex13">Click the button to display the full year of todays date.</p>
+    <form>
+        <input type="button" value="Show Year" onclick="showyear()" />
+    </form>
+    <hr />
+    <p id="ex14">Click the button</p>
+    <form>
+        <input type="button" value="Show Mili Seconds" onclick="milisc()" />
+    </form>
+    <hr />
+    <p id="ex15"></p>
+    <!--	js==>comments
+            js==>If...else
+    
+    -->
 </body>
 </html>
