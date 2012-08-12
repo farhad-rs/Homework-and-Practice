@@ -2,84 +2,63 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Fun - JS 1</title>
+<title>Java Script Fun</title>
 <style type="text/css">
-	body {
-		background-image:url('bg.jpg');	
-	}
-	div.mtns {
-		width:100px;
-		height:50px;
-		left:45%;
-		top:45%;
-		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-		font-size:16px;
-		text-align:center;
-		color:white;
-		position:absolute;
-		line-height:50px;	
-		background-color:#980D05;
-		border-radius:10px;
-		border:solid 1px white;
-		box-shadow:0 0 20px 4px #C87B77;
-		/*transform:rotate(-180deg);
-		-webkit-transform:rotate(-180deg);
-		-moz-transform:rotate(-180deg);
-		-ms-transform:rotate(-180deg);
-		-o-transform:rotate(-180deg);*/
-		transition:all 2s;
-		-webkit-transition:all 2s;
-		-moz-transition:all 2s;
-		-ms-transition:all 2s;
-		-o-transition:all 2s;
-		transition-delay:0.3s;
-		-webkit-transition-delay:0.3s;
-		-moz-transition-delay:0.3s;
-		-ms-transition-delay:0.3s;
-		-o-transition-delay:0.3s;
-	}
-	div.mtns:hover {
+body {
+	background-color:#C0C0C0;
+}
+
+#mtn {
+	width:80px;
+	height:40px;
+	color:#11C5D9;
+	font-weight:bolder;
+	position:absolute;
+	transform:rotate(-180deg);
+	-webkit-transform:rotate(-180deg);
+	-moz-transform:rotate(-180deg);
+	-ms-transform:rotate(-180deg);
+	-o-transform:rotate(-180deg);
+	transition:all 2s;
+	-webkit-transition:all 2s;
+	-moz-transition:all 2s;
+	-ms-transition:all 2s;
+	-o-transition:all 2s;
+	transition-delay:0.3s;
+	-webkit-transition-delay:0.3s;
+	-moz-transition-delay:0.3s;
+	-ms-transition-delay:0.3s;
+	-o-transition-delay:0.3s;
+}
+
+#mtn:hover {
 	width:160px;
 	height:80px;
-	border:dashed 1px white;
-	/*transform:rotate(1800deg);
+	transform:rotate(1800deg);
 	-webkit-transform:rotate(1800deg);	
 	-moz-transform:rotate(1800deg);
 	-ms-transform:rotate(1800deg);
-	-o-transform:rotate(1800deg);*/
+	-o-transform:rotate(1800deg);
 }
 </style>
-
-</head>
-<body>
-    <div class="mtns">Follow Me</div>
-    <div class="mtns">Follow Me</div>
-    <div class="mtns">Follow Me</div>
-    <div class="mtns">Follow Me</div>
-    <div class="mtns">Follow Me</div>
-    <script type="text/javascript">
-
-	/*function rnd(max) {
-		return Math.round(Math.random()*max);	
-	}
-	var mtns = document.getElementsByClassName('mtns');
-	for (var i=0;i<mtns.length;i++) {
-		mtns.item(i).onmouseover = function () {
-			this.style.left=rnd(85)+'%' ;
-			this.style.top=rnd(85)+'%';	
-		}
+<script type="text/javascript">
+	/*function click_mtn(){
+		document.getElementById("mtn");
+		style.left = Math.random()*(85%);	
+		document.getElementById("mtn");
+		style.top = Math.random()*(85%);
 	}*/
-	function rnd(a,b){
-			return Math.floor(Math.random()*(b*10))+(a*5);
-		}
-	var mtns = document.getElementsByClassName('mtns');
-	for (var i=0;i<mtns.length;i++) {
-		mtns.item(i).onmouseover = function () {
-			this.style.left= Math.round(Math.random()*85)+'%';/*return dar khat aval kar nemikonad? jaye return kojast va lazeme?*/
-			this.style.top= Math.round(Math.random()*85)+'%';
-			this.style.webkitTransform='rotate('+rnd(0,180)+'deg)';
-		}
+	function click_mtn(){
+		document.getElementById("mtn").style.left = Math.round(Math.random()*85)+'%';
+		document.getElementById("mtn").style.top = Math.round(Math.random()*85)+'%';
+		document.getElementById("mtn").style.transform = Math.round(Math.random()*20)+'%';
 	}
 </script>
+</head>
+
+<body>
+<form>
+	<input id="mtn" type="button" value="Follow Me" onmousemove="click_mtn()" />
+</form>
 </body>
 </html>

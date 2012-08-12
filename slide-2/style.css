@@ -1,0 +1,101 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;	
+}
+
+body {
+	background-color:#015378;
+	width:100%;
+	height:100%;	
+}
+
+div.container {
+	width:980px;
+	margin:30px auto;
+	padding:1px;	
+}
+
+div.slider {
+	width:800px;
+	height:500px;
+	overflow:hidden;
+	margin:0 auto;
+	position:relative;	
+}
+
+div.bgslide {
+	width:800px;
+	height:400px;
+	background-color:#050505;
+	background-image:url('image/load.gif');
+	background-position:center;
+	background-repeat:no-repeat;
+	box-shadow:0 0 10px 5px #CCCCCC;	
+}
+
+div.slides {
+	width:10000px;
+	height:400px;
+	position:absolute;
+	text-align:center;
+	-webkit-transition:all 2s;	
+}
+
+div.slides > div {
+	width:800px;
+	height:inherit;
+	float:left;
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+div.slider div.back, div.slider div.next {
+	width:30px;
+	height:30px;
+	position:absolute;
+	cursor:pointer;
+	top:185px;
+	opacity:0;
+	background-image:url('image/nb.png');
+	background-repeat:no-repeat;
+	-webkit-transition:opacity 650ms;
+}	
+
+div.slider div.back {
+	background-position:0px 0px;
+	left:10px;	
+}
+
+div.slider div.next {
+	background-position:-30px 0px;
+	right:10px;
+}
+
+div.slider:hover div.back, div.slider:hover div.next {
+	opacity:1;	
+}
+
+div.btns {
+	height:70px;
+	position:absolute;	
+	bottom:10px;
+	margin-left:170px;;
+}
+
+div.btns img {
+	width:60px;
+	height:60px;
+	float:left;
+	opacity:0.5;
+	cursor:pointer;
+	margin-right:40px;
+	border-radius:10px;
+	-webkit-transition:all 1s;
+}
+
+div.btns img:hover, div.btns img.active {
+	opacity:1;
+	-webkit-transition-duration:200ms;	
+}
