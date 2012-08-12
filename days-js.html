@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculate days of life</title>
+<style type="text/css">
+	body {
+		background-image:url('image/bg.jpg');
+		background-repeat:repeat;
+	}	
+	
+	div.container {
+		width:560px;
+		min-height:300px;
+		margin:100px auto;
+		border:thin;
+		border-radius:50%;
+		box-shadow:0 1px 120px #800000;	
+	}
+	
+	p {
+		font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size:24px;
+		color:#800000;
+		text-align:center;
+		padding-top:110px;	
+	}
+</style>
+<script type="text/javascript">
+	var y = prompt("Please enter your birth year","1994");
+	var m = prompt("Please enter your birth month","10");
+	var d = prompt("Please enter your birth day","13");
+	function time() {
+		var date = new Date(y,m-1,d);//chera -1 ??
+		var thisyear = new Date();
+		var dayslife = thisyear.valueOf()- date.valueOf();//valueOf yani chi ?
+		var year = new Date(dayslife);
+		document.getElementById("days").innerHTML= year.getFullYear()-1970 +"years " + year.getMonth() +"months " + year.getDate()+"Day "+ year.getHours()+"hours " + year.getMinutes() + "minutes " + thisyear.getSeconds() + "seconds " + thisyear.getMilliseconds() + "Milli Seconds ";//chera -1970  bara chi khodesh +1970 mikone ??
+	}
+	setInterval(time,1);
+</script>
+</head>
+<body>
+<div class="container">
+	<p id="days"></p>
+</div>
+</body>
+</html>
