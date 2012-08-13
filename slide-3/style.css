@@ -4,19 +4,20 @@ div.container {
 }
 
 div.slider {
-	width:700px;
+	width:850px;
 	height:438px;
 	overflow:hidden;
 	position:relative;	
 }
 
-div.slider slides {
-	width:5000px;
+div.slider div.slides {
+	width:3000px;
 	height:inherit;	
 }
 
-div.slider slides div {
+div.slider div.slides > div {
 	float:left;
 	height:inherit;
-	background-repeat:no-repeat;	
+	background-repeat:no-repeat;
+	background-position:left top;	
 }

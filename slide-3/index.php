@@ -19,7 +19,7 @@
 						$pic_arr = explode('.',$pic);
 						$pic_type = strtolower (end ($pic_arr));
 						if ($pic_type == 'jpg') {
-							echo "<div style=\"background-image:url('../image/slide3/$pic');\"></div>";	
+							echo "<div style=\"background-image:url('$image_path/$pic');\"></div>";	
 						}
 					}
 				?>
