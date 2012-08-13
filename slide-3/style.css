@@ -2,3 +2,21 @@ div.container {
 	width:980px;
 	margin:0 auto;	
 }
+
+div.slider {
+	width:700px;
+	height:438px;
+	overflow:hidden;
+	position:relative;	
+}
+
+div.slider slides {
+	width:5000px;
+	height:inherit;	
+}
+
+div.slider slides div {
+	float:left;
+	height:inherit;
+	background-repeat:no-repeat;	
+}
