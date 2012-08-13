@@ -29,7 +29,7 @@ div.bgslide {
 	width:800px;
 	height:400px;
 	background-color:#050505;
-	background-image:url('image/load.gif');
+	background-image:url('../image/slide2/load.gif');
 	background-position:center;
 	background-repeat:no-repeat;
 	box-shadow:0 0 10px 5px #CCCCCC;	
@@ -58,7 +58,7 @@ div.slider div.back, div.slider div.next {
 	cursor:pointer;
 	top:185px;
 	opacity:0;
-	background-image:url('image/nb.png');
+	background-image:url('../image/slide2/nb.png');
 	background-repeat:no-repeat;
 	-webkit-transition:opacity 650ms;
 }	
