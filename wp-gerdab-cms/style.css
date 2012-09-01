@@ -1,0 +1,524 @@
+/*
+Theme Name: News Agency
+Theme URI: http://fdw.ir/
+Description: gerdab.ir, news, theme for wordpress, theme for news agency.
+Author: Farhad-rs(Seyed Farhad Raeeso Sadati)
+Version: 0.1
+*/
+* {
+	padding:0;
+	margin:0;	
+}
+
+body {
+	background-image:url('image/bg.jpg');
+	background-repeat:repeat;	
+}
+
+div.container {
+	width:980px;
+	margin:10px auto;	
+}
+
+div.header {
+	width:auto;
+	height:100px;
+	background-image:url('image/header.jpg');
+	border-radius:5px;	
+}
+
+div.menu {
+	height:30px;
+	margin-top:5px;
+	background-color:#B6B6B6;
+	border-radius:5px;	
+}
+
+div.menu ul {
+	width:auto;
+	list-style-type:none;
+	margin-left:auto;
+}
+
+div.menu ul li {
+	float:right;
+	border-left:solid 2px white;
+	border-radius:5px;	
+}
+
+div.menu ul li:hover a {
+	background-color:#a70606;
+	color:white;	
+}
+
+div.menu a {
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family:tahoma,'Times New Roman';
+	border-radius:5px;
+	text-align:center;
+	font-size:15px;
+	display:block;
+	padding:7px;
+	width:100px;
+	color:black;
+	outline:0;	
+}
+
+div.headnews {
+	width:auto;
+	min-height:200px;
+	margin-top:5px;	
+}
+
+div.daypic {
+	border:solid 2px #8a0000;
+	width:240px;
+	height:200px;
+	float:left;
+	border-radius:5px;
+	background-color:white;
+	position:relative;
+}
+
+div.daypic img.pic {
+	margin-left:1px;
+	margin-right:2px;
+	margin-top:2px;
+	border-image:none;	
+}
+
+div.daypic div.back, div.daypic div.next {
+	background-image:url('image/btn.gif');
+	background-repeat:no-repeat;
+	position:absolute;
+	top:175px;
+	height:17px;
+	width:16.5px;
+}	
+
+div.daypic div.back {
+	background-position:0px 0px;
+	left:10px;
+}
+
+div.daypic div.back:hover {
+	background-position:-38px 0px;	
+}
+
+div.daypic div.next {
+	background-position:-19px 0px;
+	right:10px;
+}
+
+div.daypic div.next:hover {
+	background-position:-57px 0px;	
+}
+
+div.daypic p.pdaypic {
+	font-family:tahoma,'Times New Roman';
+	font-size:14px;
+	float:none;
+	text-align:center;
+	margin-top:5px;	
+}
+
+div.daypic p.pdaypic a {
+	text-decoration:none;
+	color:black;	
+}
+
+div.daypic p.pdaypic a:hover {
+	color:#8a0000;	
+}
+
+div.weeknews {
+	border:solid 2px #8a0000;
+	width:auto;
+	height:200px;
+	margin-left:250px;
+	margin-right:190px;
+	background-color:white;
+	border-radius:5px;
+}
+
+div.weeknews img {
+	float:right;
+	margin-left:auto;
+	margin-right:10px;
+	margin-top:30px;
+	margin-left:3px;
+	border:solid 2px silver;
+	border-image:none;	
+}
+
+div.weeknews p.titr1 {
+	font-family:tahoma,'Times New Roman' ,tahoma;
+	font-size:10px;
+	color:#808080;
+	margin-top:30px;	
+}
+
+div.weeknews p.titr2 {
+	font-family:'Times New Roman' ,tahoma;
+	font-size:17px;
+	color:#c90207;
+	font-weight:bold;	
+}
+
+div.weeknews p.matn {
+	font-family:'Times New Roman' ,tahoma;
+	font-size:13px;
+	color:black;
+	text-align:justify;
+	margin-left:2px;	
+}
+
+div.weekpic {
+	border:solid 2px #8a0000;
+	width:180px;
+	height:200px;
+	float:right;
+	background-color:white;
+	border-radius:5px;
+}
+
+div.weekpic img {
+	margin-left:3px;
+	margin-right:3px;
+	margin-top:5px;
+	border-image:none;	
+}
+
+div.content {
+	width:auto;
+	min-height:500px;
+	margin-top:5px;	
+}
+
+div.gozaresh {
+	background-color:white;
+	width:175px;
+	min-height:900px;
+	float:left;
+	border-radius:5px;		
+}
+
+div.gozaresh p.titr {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	color:#434343;
+	font-weight:bold;
+	background-color:#d7d7d7;
+	border:solid 1px white;	
+	border-radius:5px;	
+}
+
+div.gozaresh p.link {
+	background-image:url('image/bg-moshaver.gif');
+	margin:15px;
+	display:block;
+}
+
+div.gozaresh p.link a {
+	font:"Times New Roman";
+	font-size:12px;
+	text-decoration:none;
+	color:#858585;
+}
+
+div.gozaresh p.link a:hover {
+	color:#8a0000;
+}
+
+div.gozaresh p.titr1 a {
+	text-decoration:none;
+	color:#8a0000;
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	text-align:justify;	
+}
+
+div.gozaresh p.titr1 a:hover {
+	text-decoration:underline;	
+}
+
+div.gozaresh img {
+	float:left;
+	margin-left:5px;	
+}
+
+div.gozaresh p.matn {
+	text-align:justify;
+	margin-left:2px;
+	margin-right:2px;
+	font-family:tahoma,'Times New Roman' ,serif;
+}
+
+div.news {
+	background-color:white;
+	width:auto;
+	min-height:900px;
+	margin-left:180px;
+	margin-right:320px;
+	border-radius:5px;
+}
+
+div.news p.titr {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	color:#434343;
+	font-weight:bold;
+	background-color:#d7d7d7;
+	border:solid 1px white;	
+	border-radius:5px;
+}
+
+div.news p.titr1 {
+	font-family:tahoma,'Times New Roman';
+	font-size:10px;
+	color:#808080;
+	margin-right:5px;
+	margin-top:20px;	
+}
+
+div.news p.titr2 a {
+	font-family:'Times New Roman' ,tahoma;
+	font-size:17px;
+	color:#c90207;
+	font-weight:bold;
+	margin-right:5px;
+	text-decoration:none;	
+}
+
+div.news p.titr2 a:hover {
+	color:red;
+}
+
+div.news p.matn {
+	font-family:tahoma;
+	font-size:13px;
+	color:black;
+	text-align:justify;
+	margin-left:2px;
+}
+
+div.news img.post {
+	float:right;
+	margin-left:auto;
+	margin-right:10px;
+	margin-left:3px;
+	border:solid 2px silver;
+	border-image:none;	
+}
+
+div.linknews {
+	width:195px;
+	min-height:900px;
+	background-color:white;
+	margin-left:auto;
+	float:right;
+	border-radius:5px;
+}
+
+div.linknews p {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	color:#434343;
+	font-weight:bold;
+	margin-bottom:15px;
+	background-color:#d7d7d7;
+	border:solid 1px white;	
+	border-radius:5px;	
+}
+
+div.linknews ul {
+	list-style-image:url('image/link-list.gif');
+	margin-right:18px;
+	margin-left:2px;	
+	padding:0;
+}
+
+div.linknews ul > li {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:12px;
+	margin-top:10px;
+}
+
+div.linknews ul li a {
+	text-decoration:none;
+	color:#434343;	
+}
+
+div.linknews ul li a:hover {
+	color:#8a0000;	
+}
+
+div.list {
+	width:115px;
+	height:auto;
+	background-color:white;
+	float:right;
+	margin-left:5px;
+	border-radius:5px;	
+}
+
+div.list p {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	color:#434343;
+	font-weight:bold;
+	margin-bottom:15px;
+	background-color:#d7d7d7;
+	border:solid 1px white;	
+	border-radius:5px;
+}
+
+div.list ul {
+	list-style-image:url('image/list.gif');
+	margin-right:18px;
+	padding:0;
+}
+
+div.list ul li {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:12px;
+	line-height:30px;	
+}
+
+div.list ul li a {
+	text-decoration:none;
+	color:#434343;	
+}
+
+div.list ul li a:hover {
+	color:#8a0000;	
+}
+
+div.boxnews {
+	width:auto;
+	min-height:250px;
+	margin-top:5px;
+	padding:0;
+}
+
+div.boxleft {
+	width:300px;
+	min-height:250px;
+	float:left;
+	background-color:white;
+	border:solid 2px #8a0000;
+	border-radius:5px;
+}
+
+div.boxleft p.titr {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	color:#434343;
+	font-weight:bold;
+	margin-bottom:15px;
+	background-color:#d7d7d7;
+	border:solid 1px white;	
+	border-radius:5px;
+}
+
+div.boxleft ul {
+	list-style-image:url('image/link-list.gif');
+	margin-right:20px;	
+}
+
+div.boxleft li a {
+	text-decoration:none;
+	color:#434343;
+	font-family:tahoma;
+	font-size:12px;
+}
+
+div.boxleft li a:hover {
+	color:#8a0000;	
+}
+
+div.boxcenter {
+	width:auto;
+	min-height:250px;
+	background-color:white;
+	margin-left:340px;
+	margin-right:340px;
+	border:solid 2px #8a0000;
+	border-radius:5px;
+}
+
+div.boxcenter p.titr {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	color:#434343;
+	font-weight:bold;
+	margin-bottom:15px;
+	background-color:#d7d7d7;
+	border:solid 1px white;	
+	border-radius:5px;	
+}
+
+div.boxcenter ul {
+	list-style-image:url('image/link-list.gif');
+	margin-right:20px;	
+}
+
+div.boxcenter li a {
+	text-decoration:none;
+	color:#434343;
+	font-family:tahoma;
+	font-size:12px;
+}
+
+div.boxcenter li a:hover {
+	color:#8a0000;	
+}
+
+div.boxright {
+	width:300px;
+	min-height:250px;
+	float:right;
+	background-color:white;
+	border:solid 2px #8a0000;
+	margin-left:20px;
+	border-radius:5px;
+}
+
+div.boxright p.titr {
+	font-family:tahoma,'Times New Roman' ,serif;
+	font-size:15px;
+	color:#434343;
+	font-weight:bold;
+	margin-bottom:15px;
+	background-color:#d7d7d7;
+	border:solid 1px white;	
+	border-radius:5px;	
+}
+
+div.boxright ul {
+	list-style-image:url('image/link-list.gif');
+	margin-right:20px;	
+}
+
+div.boxright li a {
+	text-decoration:none;
+	color:#434343;
+	font-family:tahoma;
+	font-size:12px;
+}
+
+div.boxright li a:hover {
+	color:#8a0000;	
+}
+
+div.matn {
+	font-family:tahoma, Verdana, Geneva, sans-serif;
+	font-size:13px;
+	color:white;
+	background-color:#797979;
+	margin-top:5px;	
+	text-align:center;
+	border-radius:5px;
+	line-height:20px;
+}
